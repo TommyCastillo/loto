@@ -1,0 +1,16 @@
+<?php 
+$x=1;
+while ($data = mysqli_fetch_assoc($query)) { 
+
+if ($data[bm] != 0 ) {
+ ?>
+  <div class="col-lg-3">
+      <div class="card text-center">
+      <div class="card-body">
+        <h5>1</h5>
+        <h4 class="card-title"><?php echo $data[escuela]; ?></h4><p class="card-text"> Banda de Musica </p>         
+        <button  onclick="window.location.href='controlchange.php?colegio=<?php echo $data[escuela]; ?>&catego=bm'" >Calificar</button>
+      </div>
+    </div>
+  </div>
+<?php } ?>
